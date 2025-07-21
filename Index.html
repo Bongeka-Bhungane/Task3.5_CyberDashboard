@@ -7,20 +7,28 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="dashboard-header">
-    <div class="logo">🛡️ NCS</div>
-    <h1>Nexus Cloud Shield: System Security Dashboard</h1>
-  </header>
+  
+    <div class="sidebar">
+        <div class="logo">🛡️ NCS</div>
+        <h1>Nexus Cloud Shield: System Security Dashboard</h1>
+         <ul class="nav">
+            <li>Dashboard</li>
+            <li>Users</li>
+            <li>Reports</li>
+            <li>Settings</li>
+         </ul>
+     </div>
 
+  
   <main class="dashboard-grid">
     <div class="card">
-      <h2>🔐 Firewall Status</h2>
+      <h2>Cloud benefits</h2>
       <p>Monitors and controls incoming/outgoing traffic.</p>
       <div class="metric">🟢 Active</div>
       <ul class="indicators">
-        <li>Inbound: ✅</li>
-        <li>Outbound: ✅</li>
-        <li>Blocked Attempts: 5</li>
+        <li>Cost Saving and Reduced Investment</li>
+        <li> Increase in Scalability</li>
+        <li>High Availability and Reliability</li>
       </ul>
     </div>
 
@@ -78,6 +86,27 @@
         <li>Latency: 190ms</li>
       </ul>
     </div>
+
+    <div class="card">
+        <div id="myPlot" style="width:100%;max-width:700px"></div>
+    </div>
+
+    <script>
+const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yArray = [55, 49, 44, 24, 15];
+
+const data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar",
+  orientation:"v",
+  marker: {color:"rgba(0,0,255,0.6)"}
+}];
+
+const layout = {title:"World Wide Wine Production"};
+
+Plotly.newPlot("myPlot", data, layout);
+    </script>
   </main>
 </body>
 </html>

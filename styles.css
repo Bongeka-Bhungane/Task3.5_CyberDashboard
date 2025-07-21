@@ -6,16 +6,27 @@
 }
 body {
   font-family: Arial, sans-serif;
-  background-color: #aaa;
+  background-color: rgb(46, 135, 187);
   color: #000;
   padding: 20px;
 }
 
+.container {
+    display: grid;
+    min-height: 100vh;
+}
 /* Header */
 .dashboard-header {
   text-align: center;
   margin-bottom: 30px;
 }
+
+.sidebar{
+    width: 220px;
+    background-color: rgb(46, 100, 130);
+    padding: 30px;
+}
+
 .logo {
   font-size: 2rem;
 }
@@ -29,16 +40,16 @@ body {
 .dashboard-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: auto auto auto;
 }
 
 /* Card styles */
 .card {
-  background-color: lightblue;
+  background-color: whitesmoke;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(93, 181, 231, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(76, 76, 77, 0.3);
+  grid-template-columns: auto auto auto;
 }
 .card:hover {
   transform: translateY(-5px);
