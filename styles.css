@@ -1,0 +1,70 @@
+/* Reset and font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #aaa;
+  color: #000;
+  padding: 20px;
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo {
+  font-size: 2rem;
+}
+.dashboard-header h1 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* Grid layout */
+.dashboard-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Card styles */
+.card {
+  background-color: lightblue;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(93, 181, 231, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,255,255,0.4);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: darkslateblue;
+}
+
+.metric {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.indicators {
+  list-style: none;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
