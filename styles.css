@@ -9,31 +9,38 @@ body {
   background-color: rgb(46, 135, 187);
   color: #000;
   padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
 }
 
-.container {
-    display: grid;
-    min-height: 100vh;
-}
-/* Header */
-.dashboard-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
+/* Side-bar */
 .sidebar{
-    width: 220px;
+    width: 25%;
     background-color: rgb(46, 100, 130);
     padding: 30px;
+    z-index: 1000;
+    min-height: 100vh;
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 30px;
 }
 .dashboard-header h1 {
   font-size: 1.5rem;
   margin-top: 10px;
   color: #000;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul.nav {
+  list-style: none;
+}
+
+.sidebar ul.nav li {
+  margin: 10px 0;
+  cursor: pointer;
 }
 
 /* Grid layout */
@@ -44,30 +51,36 @@ body {
 }
 
 /* Card styles */
-.card {
+.cards {
   background-color: whitesmoke;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(76, 76, 77, 0.3);
   grid-template-columns: auto auto auto;
+  transition: transform 0.2s ease;
 }
-.card:hover {
+.cards:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,255,255,0.4);
 }
 
-.card h2 {
+.cards h2 {
   font-size: 1.25rem;
   margin-bottom: 10px;
   color: black;
 }
 
-.card p {
+.cards p {
   font-size: 0.95rem;
   margin-bottom: 15px;
   color: darkslateblue;
 }
 
+.card {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
 .metric {
   font-size: 1rem;
   font-weight: bold;
@@ -78,4 +91,25 @@ body {
   list-style: none;
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+canvas {
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .dashboard-grid {
+    margin-left: 0;
+    padding-top: 10px;
+  }
 }
